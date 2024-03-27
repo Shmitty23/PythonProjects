@@ -11,7 +11,7 @@ public class Chapter4ProgrammingChallenge22 {
         double totalEntered = 0;
         double totalWon = 0;
         String playAgain;
-        
+
         do {
             System.out.print("Enter the amount of money you want to enter into the slot machine: ");
             double amountEntered = sc.nextDouble();
