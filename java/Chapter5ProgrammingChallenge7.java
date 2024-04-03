@@ -36,7 +36,7 @@ public class Chapter5ProgrammingChallenge7 {
     }
     //method to calculate the average of all scores
     public static double calcAverage(double score1, double score2, double score3, double score4, double score5) {
-        return (score1 + score2 + score3 + score4 + score5);
+        return (score1 + score2 + score3 + score4 + score5) / 5;
     }
     // method to calculate the users grade
     public static String determineGrade(double score) {

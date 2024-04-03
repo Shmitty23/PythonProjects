@@ -8,6 +8,7 @@ public class Chapter5ProgrammingChallenge18 {
 
         int correctGuesses = 0;
 
+        //For loop to go through each round and increment 
         for (int round = 0; round < 10; round++) {
             int colorChoice = rand.nextInt(5);
             String computerColor = getColor(colorChoice);
@@ -15,6 +16,7 @@ public class Chapter5ProgrammingChallenge18 {
             System.out.println("Guess the color!\nRed\nGreen\nBlue\nOrange\nYellow");
             String userGuess = sc.nextLine();
 
+            //Check user guess and computer guess
             if (userGuess.equalsIgnoreCase(computerColor)) {
                 correctGuesses++;
                 System.out.println("You got it!");
