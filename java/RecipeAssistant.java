@@ -8,6 +8,7 @@ public class RecipeAssistant {
     public static final double chocPerBatch = 175;
     public static final double caloriePercookie = 78;//24 cookie per batch
     public static final double eggPerBatch = 2;
+    
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
