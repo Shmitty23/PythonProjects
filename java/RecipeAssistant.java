@@ -30,38 +30,41 @@ public class RecipeAssistant {
             }
         }
 
-        displayIngredients(batches);
+        ingredients(batches);
 
         System.out.println("Would you like to see nutritional information? (yes/no)");
         if (sc.next().toLowerCase().startsWith("y")) {
-            displayNutrionalInfo(batches);
+            nutrionalInfo(batches);
         }
 
-        while (true) {//Ask if user wants to view each step
+        boolean stepChecker = true;
+        while (stepChecker) {//Ask if user wants to view each step
             System.out.println("\nWhat step of the recipe would you like to see?(1-7) Enter 0 to exit the recipe assistant.");
             int userChoice = sc.nextInt();
 
             //Check if user wants to exit
             if (userChoice == 0) {
                 System.out.println("Thank you for using Recipe Assistant!");
-                break;
+                stepChecker = false;
+           } else {
+                System.out.println(cookingSteps(userChoice));
            }
-           System.out.println(displayStep(userChoice));
+        
         }
         sc.close();
     }
     //Display the needed ingredients in grams
-    private static void displayIngredients(int batches) {
+    private static void ingredients(int batches) {
         System.out.println("\nIngredients needed for " + batches + " batch(es):");
-        System.out.println("- Sugar: " + (sugarPerBatch * batches) + " grams");
-        System.out.println("- Butter: " + (butterPerBatch * batches) + " grams");
-        System.out.println("- Flour: " + (flourPerBatch * batches) + " grams");
-        System.out.println("- Chocolate Chips: " + (chocPerBatch * batches) + " grams");
-        System.out.println("- Eggs: " + (eggPerBatch * batches));
+        System.out.println("Sugar: " + (sugarPerBatch * batches) + " grams");
+        System.out.println("Butter: " + (butterPerBatch * batches) + " grams");
+        System.out.println("Flour: " + (flourPerBatch * batches) + " grams");
+        System.out.println("Chocolate Chips: " + (chocPerBatch * batches) + " grams");
+        System.out.println("Eggs: " + (eggPerBatch * batches));
     }
 
     //Display nutrional information
-    public static void displayNutrionalInfo(int batches) {
+    public static void nutrionalInfo(int batches) {
         int totalCookies = batches * 24;
         System.out.println("\nNutrional Information: ");
         System.out.println("Total cookies: " + totalCookies);
@@ -70,7 +73,7 @@ public class RecipeAssistant {
     }
 
     //return the step user chooses
-    public static String displayStep(int userChoice) {
+    public static String cookingSteps(int userChoice) {
         switch (userChoice) {
             case 1: return "1. Preheat the oven to 375 degrees Fahrenheit";
             case 2: return "2. Mix butter and sugar together until smooth.";
