@@ -16,5 +16,7 @@ public class test {
         String userLocation = sc.nextLine();
 
         System.out.println(userName + " lives in " + userLocation + " and is " + userAge + " years old.");
+
+        sc.close();
     }
 }
