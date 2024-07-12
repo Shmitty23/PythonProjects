@@ -1,12 +1,17 @@
-print("Hello! Welcome to My cafe, what would you like to order?")
-print("\nMocha\nCappucino\nLatte\nAmericano\nIced coffee\n")
+print("Hello! Thank you for coming to my coffee shop! What would you like to order?")
+print("\nMocha\nIce Coffee\nEspresso\nlatte\nAmericano\n")
 
 userDrinkChoice = input()
 
-print("\nWould you like to try any of our lunch items?")
-print("\nCrispy grilled cheese\nHam & Swiss on Baguette\nTurkey & pesta on ciabatta\nTomato & mozzarella on focaccia\n")
+print("\nWould you like to try any of our foods?")
+print("\nSandwhich\nBurrito\nMac and cheese\nCrackers\n")
 
 userFoodChoice = input()
 
-print(f"\nThank you! your {userDrinkChoice} and {userFoodChoice} is ready!")
-print("Have a great day!")
+print("Would you like to try and dessert?\n")
+print("Brownie\nCookie\nCake pop\nCupcake\n")
+
+userDessertChoice = input()
+
+print(
+    f"Thank you! Your {userDrinkChoice}, {userFoodChoice}, and {userDessertChoice} is now ready!")
